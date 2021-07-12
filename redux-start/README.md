@@ -14,7 +14,11 @@ _Fastcampus Redux 강의 내용을 정리해둔 자료입니다._
 
 - 리덕스의 액션 생성자(Action Creator)
 
-  - function 액션생성자(...args) { return 액션; }
+  ```jsx
+  function 액션생성자(...args) {
+    return 액션;
+  }
+  ```
 
 - 리덕스의 액션은 어떤 일을?
 
@@ -30,6 +34,18 @@ _Fastcampus Redux 강의 내용을 정리해둔 자료입니다._
   - 액션 객체를 만들어 내는 함수를 만드는 단계
 
 ## Reducers
+
+- 리덕스의 리듀서란?
+  - 액션을 주면, 그 액션이 적용되어 달라진(안달라질수도) 결과를 만들어 줌
+  - 그냥 함수(Pure Function)다.
+    - Pure Function? 항상 같은 인풋을 받으면 항상 같은 결과를 내는 함수
+    - Immutable해야함. 리듀서를 통해 state가 달라졌음을 리덕스가 인지하는 방식
+  ```jsx
+  function 리듀서(previousState, action) {
+    return newState;
+  }
+  ```
+  - prevState, newState는 다른 참조를 가지도록 해야한다.(Immutable)
 
 ## createStore
 
