@@ -61,3 +61,11 @@ const store = createStore(리듀서);
 ## combineReducers
 
 ## Redux를 React에 연결
+
+- `react-redux` 안쓰고 하기
+  1. 단일 store를 만들고
+  1. subscribe와 getState를 이용하여,
+  1. 변경되는 state 데이터를 얻어,
+  1. props로 계속 아래로 전달
+  - `componentDidMount` => `subscribe`
+  - `componentWillUnmount` => `unsubscribe`

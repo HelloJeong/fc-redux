@@ -4,22 +4,22 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import store from "./redux/store";
-import { addToDo, completeTodo, showAll, showComplete } from "./redux/actions";
+import ReduxContext from "./contexts/ReduxContext";
 
 // state의 변화가 일어나면 함수가 실행됨
 // const unsubscribe = store.subscribe(() => {
-store.subscribe(() => {
-  console.log(store.getState());
-});
+// store.subscribe(() => {
+//   console.log(store.getState());
+// });
 
 // console.log(store);
 // console.log(store.getState()); // 초기에 빈 배열이 나오는 이유
-store.dispatch(addToDo("coding"));
-store.dispatch(addToDo("sports"));
-store.dispatch(addToDo("game"));
-store.dispatch(completeTodo(2));
-store.dispatch(showAll());
-store.dispatch(showComplete());
+// store.dispatch(addToDo("coding"));
+// store.dispatch(addToDo("sports"));
+// store.dispatch(addToDo("game"));
+// store.dispatch(completeTodo(2));
+// store.dispatch(showAll());
+// store.dispatch(showComplete());
 // unsubscribe();
 // store.dispatch(addToDo("coding"));
 // store.dispatch(addToDo("sports"));
@@ -28,7 +28,9 @@ store.dispatch(showComplete());
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ReduxContext.Provider value={store}>
+      <App />
+    </ReduxContext.Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
