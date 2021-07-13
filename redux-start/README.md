@@ -102,3 +102,15 @@ const store = createStore(리듀서);
   ```
   - 디스패치가 호출될 때 실제로 미들웨어를 통과하는 부분
 - dispatch 메소드를 통해 store로 가고 있는 액션을 가로채는 코드
+
+## redux-devtools([참조](https://github.com/zalmoxisus/redux-devtools-extension))
+
+```bash
+npm i redux-devtools-extension -D
+```
+
+- chrome `redux devTools` extension 설치
+
+## redux-thunk([참조](https://github.com/reduxjs/redux-thunk))
+
+## redux-promise-middleware
