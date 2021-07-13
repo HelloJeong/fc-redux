@@ -80,3 +80,4 @@ const store = createStore(리듀서);
       - 어떤 state를 어떤 props에 연결할 것인지 정의
       - 어떤 dispatch를 어떤 props에 연결할 것인지 정의
       - 그 props를 보낼 컴포넌트를 정의
+  - 또는 connect 대신 useSelector, useDispatch hook을 사용
