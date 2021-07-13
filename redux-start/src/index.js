@@ -4,10 +4,11 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import store from "./redux/store";
-import { addToDo } from "./redux/actions";
+import { addToDo, completeTodo, showAll, showComplete } from "./redux/actions";
 
 // state의 변화가 일어나면 함수가 실행됨
-const unsubscribe = store.subscribe(() => {
+// const unsubscribe = store.subscribe(() => {
+store.subscribe(() => {
   console.log(store.getState());
 });
 
@@ -16,11 +17,14 @@ const unsubscribe = store.subscribe(() => {
 store.dispatch(addToDo("coding"));
 store.dispatch(addToDo("sports"));
 store.dispatch(addToDo("game"));
-unsubscribe();
-store.dispatch(addToDo("coding"));
-store.dispatch(addToDo("sports"));
-store.dispatch(addToDo("game"));
-console.log(store.getState());
+store.dispatch(completeTodo(2));
+store.dispatch(showAll());
+store.dispatch(showComplete());
+// unsubscribe();
+// store.dispatch(addToDo("coding"));
+// store.dispatch(addToDo("sports"));
+// store.dispatch(addToDo("game"));
+// console.log(store.getState());
 
 ReactDOM.render(
   <React.StrictMode>
