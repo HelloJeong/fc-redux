@@ -113,4 +113,9 @@ npm i redux-devtools-extension -D
 
 ## redux-thunk([참조](https://github.com/reduxjs/redux-thunk))
 
+- 리덕스 미들웨어
+- 리덕스에서 비동기 처리를 위한 라이브러리
+- 액션 생성자를 활용하여 비동기 처리
+- 액션 생성자가 액션을 리턴하지 않고 함수를 리턴
+
 ## redux-promise-middleware
