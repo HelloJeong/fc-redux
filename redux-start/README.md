@@ -49,6 +49,15 @@ _Fastcampus Redux 강의 내용을 정리해둔 자료입니다._
 
 ## createStore
 
+- 스토어를 만드는 함수
+
+```jsx
+const store = createStore(리듀서);
+```
+
+- 현재 프로젝트에서 getStore()를 초기에 호출할 때 빈 배열이 나오는 이유
+  - todoApp이 최초로 실행되면서 initalState가 반환되기 때문
+
 ## combineReducers
 
 ## Redux를 React에 연결

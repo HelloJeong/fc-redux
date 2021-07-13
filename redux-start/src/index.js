@@ -1,14 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import store from "./redux/store";
+import { addToDo } from "./redux/actions";
+
+// state의 변화가 일어나면 함수가 실행됨
+const unsubscribe = store.subscribe(() => {
+  console.log(store.getState());
+});
+
+// console.log(store);
+// console.log(store.getState()); // 초기에 빈 배열이 나오는 이유
+store.dispatch(addToDo("coding"));
+store.dispatch(addToDo("sports"));
+store.dispatch(addToDo("game"));
+unsubscribe();
+store.dispatch(addToDo("coding"));
+store.dispatch(addToDo("sports"));
+store.dispatch(addToDo("game"));
+console.log(store.getState());
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
