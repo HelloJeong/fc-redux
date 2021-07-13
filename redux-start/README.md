@@ -118,4 +118,4 @@ npm i redux-devtools-extension -D
 - 액션 생성자를 활용하여 비동기 처리
 - 액션 생성자가 액션을 리턴하지 않고 함수를 리턴
 
-## redux-promise-middleware
+## redux-promise-middleware([참조](https://pburtchaell.gitbook.io/redux-promise-middleware))

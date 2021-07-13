@@ -64,3 +64,20 @@ export function getUsersThunk() {
     }
   };
 }
+
+const GET_USERS = "GET_USERS";
+
+/* 미들웨어가 자동으로 생성해주는 타입 */
+export const GET_USERS_PENDING = "GET_USERS_PENDING";
+export const GET_USERS_FULFILLED = "GET_USERS_FULFILLED";
+export const GET_USERS_REJECTED = "GET_USERS_REJECTED";
+
+export function getUsersPromise() {
+  return {
+    type: GET_USERS,
+    payload: async () => {
+      const res = await axios.get("https://api.github.com/users");
+      return res.data;
+    },
+  };
+}
