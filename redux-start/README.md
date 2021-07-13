@@ -87,3 +87,18 @@ const store = createStore(리듀서);
 - 비동기 작업 어디서?가 제일 중요하다.
   - 액션 분리(start, success, fail 등)
   - **_dispatch를 할 때 해주면 된다._**
+    - 당연히 리듀서는 동기적인 것(Pure)
+    - dispatch도 동기적인 것
+  - **컴포넌트가 해주는 것은 로직이 복잡해질 수 있기 때문에 컨테이너에서 해준다!**
+
+## Redux middleware([참조](https://redux.js.org/understanding/history-and-design/middleware#understanding-middleware))
+
+- 미들웨어가 "디스패치"의 앞 뒤에 코드를 추가할 수 있게 해줌
+- 미들웨어가 여러 개면 미들웨어가 "순차적으로" 실행됨
+- 두 단계가 있음
+  - 스토어를 만들 때 미들웨어를 설정하는 부분
+  ```jsx
+  import { createStore, applyMiddleware } from redux;
+  ```
+  - 디스패치가 호출될 때 실제로 미들웨어를 통과하는 부분
+- dispatch 메소드를 통해 store로 가고 있는 액션을 가로채는 코드
