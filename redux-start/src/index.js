@@ -4,7 +4,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import store from "./redux/store";
-import ReduxContext from "./contexts/ReduxContext";
+// import ReduxContext from "./contexts/ReduxContext";
+
+import { Provider } from "react-redux";
 
 // state의 변화가 일어나면 함수가 실행됨
 // const unsubscribe = store.subscribe(() => {
@@ -28,9 +30,11 @@ import ReduxContext from "./contexts/ReduxContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ReduxContext.Provider value={store}>
+    {/* <ReduxContext.Provider value={store}> */}
+    <Provider store={store}>
       <App />
-    </ReduxContext.Provider>
+    </Provider>
+    {/* </ReduxContext.Provider> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

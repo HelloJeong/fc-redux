@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
-import TodoList from "./components/TodoList";
-import TodoForm from "./components/TodoForm";
+import TodoListContainer from "./containers/TodoListContainer";
+import TodoFormContainer from "./containers/TodoFormContainer";
 
 function App() {
   return (
@@ -9,8 +9,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {/* {JSON.stringify(state)} */}
-        <TodoList />
-        <TodoForm />
+        <TodoListContainer />
+        <TodoFormContainer />
       </header>
     </div>
   );

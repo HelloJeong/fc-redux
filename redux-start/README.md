@@ -63,9 +63,20 @@ const store = createStore(리듀서);
 ## Redux를 React에 연결
 
 - `react-redux` 안쓰고 하기
+
   1. 단일 store를 만들고
   1. subscribe와 getState를 이용하여,
   1. 변경되는 state 데이터를 얻어,
   1. props로 계속 아래로 전달
+
   - `componentDidMount` => `subscribe`
   - `componentWillUnmount` => `unsubscribe`
+
+- `react-redux`
+  - Provider 컴포넌트를 제공
+  - connect HOC 함수를 통해 'container'를 만들어줌
+    - container는 store의 state와 dispatch를 연결한 컴포넌트에 props로 넣어주는 역할을 함
+    - 필요한 것
+      - 어떤 state를 어떤 props에 연결할 것인지 정의
+      - 어떤 dispatch를 어떤 props에 연결할 것인지 정의
+      - 그 props를 보낼 컴포넌트를 정의
