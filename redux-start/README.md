@@ -81,3 +81,9 @@ const store = createStore(리듀서);
       - 어떤 dispatch를 어떤 props에 연결할 것인지 정의
       - 그 props를 보낼 컴포넌트를 정의
   - 또는 connect 대신 useSelector, useDispatch hook을 사용
+
+## Async Action with Redux
+
+- 비동기 작업 어디서?가 제일 중요하다.
+  - 액션 분리(start, success, fail 등)
+  - **_dispatch를 할 때 해주면 된다._**

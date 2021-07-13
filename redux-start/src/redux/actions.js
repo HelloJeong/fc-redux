@@ -27,3 +27,26 @@ export function showAll() {
 export function showComplete() {
   return { type: SHOW_COMPLETE };
 }
+
+// users
+export const GET_USERS_START = "GET_USERS_START"; // github api 호출을 시작하는 것을 의미(로딩)
+export const GET_USERS_SUCCESS = "GET_USERS_SUCCESS"; // github api 호출의 응답이 성공적인 경우(로딩 후 데이터 세팅)
+export const GET_USERS_FAIL = "GET_USERS_FAIL"; // github api 호출의 응답이 실패인 경우(로딩 후 에러 세팅)
+
+export function getUsersStart() {
+  return {
+    type: GET_USERS_START,
+  };
+}
+export function getUsersSuccess(data) {
+  return {
+    type: GET_USERS_SUCCESS,
+    data,
+  };
+}
+export function getUsersFail(error) {
+  return {
+    type: GET_USERS_FAIL,
+    error,
+  };
+}
