@@ -166,3 +166,11 @@ npm i redux-saga
   1. 사가 함수를 실행할 액션을 디스패치
 
 - effects([참조](https://redux-saga.js.org/docs/basics/Effect))
+
+## redux-actions([참조](https://github.com/redux-utilities/redux-actions))
+
+```bash
+npm i redux-actions
+```
+
+- ducks pattern을 쉽게 구현할 수 있도록 도와주는 라이브러리
