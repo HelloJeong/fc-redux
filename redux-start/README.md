@@ -149,3 +149,20 @@ npm i redux-devtools-extension -D
   - 리듀서에 `router: connectRouter(history)`를 저장
   - 스토어에 `routerMiddleware(history)`를 미들웨어로 등록
   - dispatch로 history의 함수 등을 사용할 수 있음 `dispatch(push("/todos"))`
+
+## redux-saga([참조](https://redux-saga.js.org))
+
+```bash
+npm i redux-saga
+```
+
+- 미들웨어
+- 제너레이터 객체를 만들어내는 제너레이터 생성 함수를 이용([참조](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Generator))
+- 사용 방법
+
+  1. 리덕스 사가 미들웨어를 설정
+  1. 내가 만든 사가 함수를 등록
+  1. 사가 미들웨어를 실행
+  1. 사가 함수를 실행할 액션을 디스패치
+
+- effects([참조](https://redux-saga.js.org/docs/basics/Effect))
