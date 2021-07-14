@@ -131,3 +131,21 @@ npm i redux-devtools-extension -D
 
 - 장점
   - 모듈별 작업이 되기 때문에 작업의 수월함이 있음
+
+## react-router와 redux 함께 쓰기([참조](https://github.com/supasate/connected-react-router))
+
+- redux에서 history와 같은 것을 어떻게 쓸지
+- `createBrowserHistory()`
+- BrowserRouter는 브라우저 history를 자체적으로 사용하기 때문에 우리가 만든 history는 호환이 안됨
+
+  - BrowserRouter 대신 Router를 사용
+
+- reducer로 router를 통째로 연결하는 방법
+
+  ```bash
+  npm i connected-react-router
+  ```
+
+  - 리듀서에 `router: connectRouter(history)`를 저장
+  - 스토어에 `routerMiddleware(history)`를 미들웨어로 등록
+  - dispatch로 history의 함수 등을 사용할 수 있음 `dispatch(push("/todos"))`
