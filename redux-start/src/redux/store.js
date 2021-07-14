@@ -1,4 +1,4 @@
-import todoApp from "./reducers/";
+import todoApp from "./modules/";
 import { applyMiddleware, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";

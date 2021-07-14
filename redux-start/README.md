@@ -119,3 +119,15 @@ npm i redux-devtools-extension -D
 - 액션 생성자가 액션을 리턴하지 않고 함수를 리턴
 
 ## redux-promise-middleware([참조](https://pburtchaell.gitbook.io/redux-promise-middleware))
+
+## Ducks Pattern([참조](https://github.com/erikras/ducks-modular-redux))
+
+- 규칙
+
+  - 항상 `reducer()`란 이름의 함수를 `export default` 해야한다.
+  - 항상 모듈의 action 생성자들을 함수형태로 `export` 해야한다.
+  - 항상 `npm-module-or-app/reducer-ACTION_TYPE` 형태의 action 타입을 가져야한다.
+  - 외부 reducer가 해당 action들이 발생하는지 계속 기다리거나, 재사용할 수 있는 라이브러리로 퍼블리싱할 경우에는 action 타입들을 `UPPER_SNAKE_CASE`로 export 할 수 있다.
+
+- 장점
+  - 모듈별 작업이 되기 때문에 작업의 수월함이 있음
